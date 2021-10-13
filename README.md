@@ -9,4 +9,4 @@
   </a>
 </p>
 
-Self made Java file compressor program based on Huffman's lossless compression algorithm
+Self-made Java file compressor program based on Huffman's lossless compression algorithm

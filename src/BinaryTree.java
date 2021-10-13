@@ -1,5 +1,5 @@
 /**
- * @aurthor Winston Riggs
+ * @author Winston Riggs
  * @version 9/4/20
  *
  * Binary Tree class with a root using the Node class

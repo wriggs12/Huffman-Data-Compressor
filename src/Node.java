@@ -1,5 +1,5 @@
 /**
- * @aurthor Winston Rigs
+ * @author Winston Riggs
  * @version 9/4/20
  *
  * Node class with a value, frequency, left/right child, visited, and a parent

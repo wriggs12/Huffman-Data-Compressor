@@ -1,6 +1,6 @@
 /**
- * @aurthor Winston Riggs
- * @version 9/24/20
+ * @author Winston Riggs
+ * @version 1.0 9/24/20
  *
  * Compresses a given String using the huffman compression algorithm
  */
