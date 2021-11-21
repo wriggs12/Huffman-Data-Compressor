@@ -1,4 +1,4 @@
-<h1 align="center">Machine Learning Practice</h1>
+<h1 align="center">Huffman Data Compressor</h1>
 
 <p align="center">
   <a href="https://github.com/wriggs12/Huffman-Data-Compressor/blob/master/LICENSE">
@@ -8,7 +8,7 @@
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/wriggs12?style=social">
   </a>
   <a href="https://github.com/wriggs12">
-    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/wriggs12/Machine-Learning-Practice">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/wriggs12/Huffman-Data-Compressor">
   </a>
 </p>
 
