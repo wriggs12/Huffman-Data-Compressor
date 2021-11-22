@@ -6,19 +6,23 @@
  */
 
 public class Node {
-    private String value;
+    private char value;
     private int freq;
     private Node left;
     private Node right;
     private Node parent;
-    private boolean visited;
 
-    Node(String v, int f) {
+    Node(char v, int f) {
         this.value = v;
         this.freq = f;
-        left = right = null;
-        parent = null;
-        visited = false;
+        this.left = this.right = null;
+        this.parent = null;
+    }
+
+    Node(int f) {
+        this.freq = f;
+        this.left = this.right = null;
+        this.parent = null;
     }
 
     public void setLeft(Node l) {
@@ -33,15 +37,11 @@ public class Node {
         parent = p;
     }
 
-    public void visit() {
-        visited = true;
-    }
-
     public int getFreq() {
         return freq;
     }
 
-    public String getVal() {
+    public char getVal() {
         return value;
     }
 
@@ -55,9 +55,5 @@ public class Node {
 
     public Node getParent() {
         return parent;
-    }
-
-    public boolean hasBeenVisited() {
-        return visited;
     }
 }
