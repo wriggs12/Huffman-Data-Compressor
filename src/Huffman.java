@@ -1,8 +1,8 @@
 /**
  * @author Winston Riggs
- * @version 1.0 9/24/20
+ * @version 1.2 11/22/21
  *
- * Compresses a given String using the huffman compression algorithm
+ * Implements the Huffman Encoding Algorithm to compress and decompress files
  */
 
 //import required classes
@@ -18,13 +18,21 @@ public class Huffman {
     private BinaryTree huffmanTree;
     private static final String headBodySeparator = "@$$%";
 
+    /**
+     * Default Constructor
+     */
     public Huffman() {
         codes = new HashMap<Character, String >();
         decompressCodes = new HashMap<String, Character>();
         huffmanTree = new BinaryTree();
     }
 
-    public String compressFile(String filePath) {
+    /**
+     * Will compress a given file using the Huffman encoding technique
+     * @param filePath String of the path to the file to compress
+     * @return void
+     */
+    public void compressFile(String filePath) {
         try{
             File inputFile = new File(filePath);
             Scanner fileReader = new Scanner(inputFile);
@@ -38,21 +46,22 @@ public class Huffman {
             fileReader.close();
 
             String compressedText = compress(input);
-            File outputFile = new File("compressed.txt");
+            File outputFile = new File("../Files/compressed.txt");
             FileWriter writer = new FileWriter(outputFile);
 
             writer.write(compressedText);
             writer.close();
-
-            return compressedText;
         }
         catch(Exception e) {
             e.printStackTrace();
         }
-
-        return "";
     }
 
+    /**
+     * Given the input string will compress using the Huffman encoding technique
+     * @param input String of the input text
+     * @return A compressed String of 0's and 1's
+     */
     private String compress(String input) {
         char[] msgChar = input.toCharArray();
         ArrayList<Character> characters = new ArrayList<>();
@@ -94,6 +103,11 @@ public class Huffman {
         return header + headBodySeparator + "\n" + compressedString;
     }
 
+    /**
+     * Given a compressed file, will decompress
+     * @param fileName String of the file to decompress
+     * @return void
+     */
     public void decompressFile(String fileName) {
         try {
             String input = findCodes(fileName);
@@ -110,7 +124,7 @@ public class Huffman {
                 }
             }
 
-            File outputFile = new File("decompressed.txt");
+            File outputFile = new File("../Files/decompressed.txt");
             FileWriter writer = new FileWriter(outputFile);
 
             writer.write(original);
@@ -121,6 +135,12 @@ public class Huffman {
         }
     }
 
+    /**
+     * Will find the codes associated with each character
+     * @param fileName name of the file to compress
+     * @post codes contains the keys for each character
+     * @return String of the input text
+     */
     private String findCodes(String fileName) {
         try {
             File inputFile = new File(fileName);
@@ -156,6 +176,11 @@ public class Huffman {
         return "";
     }
 
+    /**
+     * Will generate the header for a file with metadata
+     * @param characters ArrayList of the unique characters in the input text
+     * @return A String containing the header
+     */
     private String generateHeader(ArrayList<Character> characters) {
         String header = "";
 
