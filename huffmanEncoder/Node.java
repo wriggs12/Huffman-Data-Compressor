@@ -5,6 +5,8 @@
  * Node class with a value, frequency, left/right child, visited, and a parent
  */
 
+package huffmanEncoder;
+
 public class Node {
     private char value;
     private int freq;

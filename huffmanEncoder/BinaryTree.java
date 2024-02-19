@@ -5,6 +5,8 @@
  * Binary Tree class with a root using the Node class
  */
 
+package huffmanEncoder;
+
 public class BinaryTree {
     private Node root;
 

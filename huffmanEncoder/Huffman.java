@@ -5,6 +5,8 @@
  * Implements the Huffman Encoding Algorithm to compress and decompress files
  */
 
+package huffmanEncoder;
+
 //import required classes
 import java.io.File;
 import java.io.FileWriter;
@@ -46,7 +48,7 @@ public class Huffman {
             fileReader.close();
 
             String compressedText = compress(input);
-            File outputFile = new File("../Files/compressed.txt");
+            File outputFile = new File("./Files/compressed.txt");
             FileWriter writer = new FileWriter(outputFile);
 
             writer.write(compressedText);
@@ -124,7 +126,7 @@ public class Huffman {
                 }
             }
 
-            File outputFile = new File("../Files/decompressed.txt");
+            File outputFile = new File("./Files/decompressed.txt");
             FileWriter writer = new FileWriter(outputFile);
 
             writer.write(original);
