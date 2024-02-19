@@ -14,6 +14,13 @@
 
 Self-made Java file compressor program based on Huffman's lossless compression algorithm
 
+## How To Run
+
+1. Place text into Files/text.txt
+2. Complile with \
+   `javac ./huffmanEncoder/Main.java ./huffmanEncoder/Huffman.java ./huffmanEncoder/Node.java ./huffmanEncoder/BinaryTree.java`
+4. Run with \
+   `huffmanEncoder.Main`
 
 ## Lessons Learned
 
